@@ -1,0 +1,7 @@
+# Patch files and shell scripts must stay LF so `git apply` and bash work on
+# Linux. The developer machine has core.autocrlf=true, which would otherwise
+# rewrite these on checkout.
+* text=auto eol=lf
+
+# PowerShell receives CRLF on Windows checkouts.
+*.ps1 text eol=crlf
